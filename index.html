@@ -1,0 +1,109 @@
+<!DOCTYPE html> <html><head>
+        <title> Which Club America Player Are You? </title>
+        <link href="https://fonts.googleapis.com/css2?family=Oswald&amp;display=swap" rel="stylesheet">
+    <style>body {
+
+    font-family: 'serif', Georgia;
+    background-color: #FFEE99;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.Mala {
+    display: none;
+}
+
+.Bomba {
+    display: none;
+}
+
+.Nahin {
+    display: none;
+}
+
+.Igor {
+    display: none;
+}</style></head>
+    <body>
+        <div class="title">
+            <h1> Which Club America Player Are You?</h1>
+            <img src="https://pbs.twimg.com/media/Duoj-udXcAAIlqc.jpg">
+        </div>
+
+        <div class="questions">
+            <h4>What jersey number would you be?</h4>
+            <img src="https://soccerzoneusa.com/cdn/shop/products/DJ7639_707_B_PREM_875x.jpg?v=1672194517">
+            <h4>Pick a number between 1-33</h4>
+            <input class="q1">
+
+            <h4>Are you Rude/Sarcastic or Nice/Playful</h4>
+            <img src="https://images2.minutemediacdn.com/image/upload/c_crop,w_3600,h_2025,x_0,y_210/c_fill,w_720,ar_16:9,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/90min_en_international_web/01h6f4rx5pw4z1zjxxxz.jpg">
+            <h5> put in Nice and playful or Rude and sarcastic
+                (make sure to capitalize the first letter and dont add spaces to the end)</h5>
+            <input class="q2">
+        </div>
+        <button> click </button>
+        <div class="result">
+            this is where the user will see their quiz result!
+            <div class="countmsg">
+            </div>
+        </div>
+
+             <audio id="myAudio" controls="">
+                <source src="https://cdn.glitch.global/ceecf224-61c4-4403-bbb2-e473bab5039d/angel-choir.mp3" type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+
+        
+        <img alt="Luis Angel Malagon" class="Mala" src="https://www.pasionaguila.com/u/fotografias/m/2024/2/18/f960x540-21848_95923_15.jpg">
+
+        <img alt="Henry Martin" class="Bomba" src="https://i.redd.it/henry-martin-v0-6mygoluby7fa1.jpg?width=1080&amp;format=pjpg&amp;auto=webp&amp;s=a36b7ed63b7ed9b3b701d61c1d0ea8af39c559eb">
+
+        <img alt="Kevin Alvarez" class="Nahin" src="https://images.mlssoccer.com/image/private/t_q-best/lc-prd/nheswrct5p1xbhx5vn0k.jpg">
+
+        <img alt="Igor" class="Igor" src="https://image-service.onefootball.com/transform?w=280&amp;h=210&amp;dpr=2&amp;image=https%3A%2F%2Fimg.optimalcdn.com%2Fwww.posta.com.mx%2F2023%2F09%2F35c3de1c2e222047ebe517e7873e130259f6aca4%2FF6hh1fQWgAAPxre__1_.webp">
+
+    
+<script>
+/*__POPCODESTART__*/
+var counter = 0;
+var button = document.querySelector("button");
+var result = document.querySelector(".result");
+var mala = document.querySelector(".Mala");
+var bomba = document.querySelector(".Bomba");
+var nahin = document.querySelector(".Nahin");
+var igor = document.querySelector(".Igor");
+var countmsg = document.querySelector(".countmsg");
+
+button.onclick = function () {
+  counter = counter + 1;
+  var ans1 = document.querySelector(".q1").value;
+  var ans2 = document.querySelector(".q2").value;
+  console.log(ans1);
+  console.log(ans2);
+
+  if (ans1 > 0 && ans1 < 15 && ans2 === "Nice and playful") {
+    result.innerHTML = " you picked " + ans1 + " and " + ans2 + " you are Luis Angel Malagon";
+    mala.style.display = "block";
+  } else if (ans1 > 15 && ans1 < 34 && ans2 === "Nice and playful") {
+    result.innerHTML = " you picked " + ans1 + " and " + ans2 + " you are Henry Martin";
+    bomba.style.display = "block";
+  } else if (ans1 > 0 && ans1 < 15 && ans2 === "Rude and sarcastic") {
+    result.innerHTML = " you picked " + ans1 + " and " + ans2 + " you are Kevin Alvarez";
+    nahin.style.display = "block";
+  } else if (ans1 > 15 && ans1 < 34 && ans2 === "Rude and sarcastic") {
+    result.innerHTML = " you picked " + ans1 + " and " + ans2 + " you are Igor";
+    igor.style.display = "block";
+  } else {
+    result.innerHTML = "Incorrect inputs, try again";
+  }
+
+  countmsg.innerHTML = "you took this quiz" + counter + "time/s";
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBvcGNvZGVQcmV2aWV3LmpzIl0sIm5hbWVzIjpbImNvdW50ZXIiLCJidXR0b24iLCJkb2N1bWVudCIsInF1ZXJ5U2VsZWN0b3IiLCJyZXN1bHQiLCJtYWxhIiwiYm9tYmEiLCJuYWhpbiIsImlnb3IiLCJjb3VudG1zZyIsIm9uY2xpY2siLCJhbnMxIiwidmFsdWUiLCJhbnMyIiwiY29uc29sZSIsImxvZyIsImlubmVySFRNTCIsInN0eWxlIiwiZGlzcGxheSJdLCJtYXBwaW5ncyI6IkFBQUEsSUFBSUEsT0FBTyxHQUFHLENBQWQ7QUFDQSxJQUFJQyxNQUFNLEdBQUdDLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixDQUFiO0FBQ0EsSUFBSUMsTUFBTSxHQUFHRixRQUFRLENBQUNDLGFBQVQsQ0FBdUIsU0FBdkIsQ0FBYjtBQUNBLElBQUlFLElBQUksR0FBR0gsUUFBUSxDQUFDQyxhQUFULENBQXVCLE9BQXZCLENBQVg7QUFDQSxJQUFJRyxLQUFLLEdBQUdKLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixRQUF2QixDQUFaO0FBQ0EsSUFBSUksS0FBSyxHQUFHTCxRQUFRLENBQUNDLGFBQVQsQ0FBdUIsUUFBdkIsQ0FBWjtBQUNBLElBQUlLLElBQUksR0FBR04sUUFBUSxDQUFDQyxhQUFULENBQXVCLE9BQXZCLENBQVg7QUFDQSxJQUFJTSxRQUFRLEdBQUdQLFFBQVEsQ0FBRUMsYUFBVixDQUF5QixXQUF6QixDQUFmOztBQUNBRixNQUFNLENBQUNTLE9BQVAsR0FBaUIsWUFBVztBQUMzQlYsRUFBQUEsT0FBTyxHQUFHQSxPQUFPLEdBQUcsQ0FBcEI7QUFDRyxNQUFJVyxJQUFJLEdBQUdULFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixLQUF2QixFQUE4QlMsS0FBekM7QUFDQSxNQUFJQyxJQUFJLEdBQUdYLFFBQVEsQ0FBQ0MsYUFBVCxDQUF1QixLQUF2QixFQUE4QlMsS0FBekM7QUFFQUUsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlKLElBQVo7QUFDQUcsRUFBQUEsT0FBTyxDQUFDQyxHQUFSLENBQVlGLElBQVo7O0FBQ0EsTUFBSUYsSUFBSSxHQUFHLENBQVAsSUFBWUEsSUFBSSxHQUFHLEVBQW5CLElBQXlCRSxJQUFJLEtBQUssa0JBQXRDLEVBQTBEO0FBQ3REVCxJQUFBQSxNQUFNLENBQUNZLFNBQVAsR0FBbUIsaUJBQWlCTCxJQUFqQixHQUF3QixPQUF4QixHQUFrQ0UsSUFBbEMsR0FBeUMsNkJBQTVEO0FBQ0FSLElBQUFBLElBQUksQ0FBQ1ksS0FBTCxDQUFXQyxPQUFYLEdBQXFCLE9BQXJCO0FBQ0gsR0FIRCxNQUtLLElBQUlQLElBQUksR0FBRyxFQUFQLElBQWFBLElBQUksR0FBRyxFQUFwQixJQUEwQkUsSUFBSSxLQUFLLGtCQUF2QyxFQUEyRDtBQUM1RFQsSUFBQUEsTUFBTSxDQUFDWSxTQUFQLEdBQW1CLGlCQUFpQkwsSUFBakIsR0FBd0IsT0FBeEIsR0FBa0NFLElBQWxDLEdBQXlDLHVCQUE1RDtBQUNBUCxJQUFBQSxLQUFLLENBQUNXLEtBQU4sQ0FBWUMsT0FBWixHQUFzQixPQUF0QjtBQUNILEdBSEksTUFLQSxJQUFJUCxJQUFJLEdBQUcsQ0FBUCxJQUFZQSxJQUFJLEdBQUcsRUFBbkIsSUFBeUJFLElBQUksS0FBSyxvQkFBdEMsRUFBNEQ7QUFDN0RULElBQUFBLE1BQU0sQ0FBQ1ksU0FBUCxHQUFtQixpQkFBaUJMLElBQWpCLEdBQXdCLE9BQXhCLEdBQWtDRSxJQUFsQyxHQUF5Qyx3QkFBNUQ7QUFDQU4sSUFBQUEsS0FBSyxDQUFDVSxLQUFOLENBQVlDLE9BQVosR0FBc0IsT0FBdEI7QUFDSCxHQUhJLE1BS0EsSUFBSVAsSUFBSSxHQUFHLEVBQVAsSUFBYUEsSUFBSSxHQUFHLEVBQXBCLElBQTBCRSxJQUFJLEtBQUssb0JBQXZDLEVBQTZEO0FBQzlEVCxJQUFBQSxNQUFNLENBQUNZLFNBQVAsR0FBbUIsaUJBQWlCTCxJQUFqQixHQUF3QixPQUF4QixHQUFrQ0UsSUFBbEMsR0FBeUMsZUFBNUQ7QUFDQUwsSUFBQUEsSUFBSSxDQUFDUyxLQUFMLENBQVdDLE9BQVgsR0FBcUIsT0FBckI7QUFDSCxHQUhJLE1BSUE7QUFDUmQsSUFBQUEsTUFBTSxDQUFDWSxTQUFQLEdBQW1CLDZCQUFuQjtBQUNJOztBQUVEUCxFQUFBQSxRQUFRLENBQUNPLFNBQVQsR0FBcUIsdUJBQXVCaEIsT0FBdkIsR0FBaUMsUUFBdEQ7QUFJSCxDQWxDRCIsInNvdXJjZXNDb250ZW50IjpbImxldCBjb3VudGVyID0gMDtcbmxldCBidXR0b24gPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiYnV0dG9uXCIpO1xubGV0IHJlc3VsdCA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucmVzdWx0XCIpO1xubGV0IG1hbGEgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLk1hbGFcIik7XG5sZXQgYm9tYmEgPSBkb2N1bWVudC5xdWVyeVNlbGVjdG9yKFwiLkJvbWJhXCIpO1xubGV0IG5haGluID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5OYWhpblwiKTtcbmxldCBpZ29yID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5JZ29yXCIpO1xubGV0IGNvdW50bXNnID0gZG9jdW1lbnQuIHF1ZXJ5U2VsZWN0b3IgKFwiLmNvdW50bXNnXCIpO1xuYnV0dG9uLm9uY2xpY2sgPSBmdW5jdGlvbigpIHtcbiBjb3VudGVyID0gY291bnRlciArIDE7IFxuICAgIGxldCBhbnMxID0gZG9jdW1lbnQucXVlcnlTZWxlY3RvcihcIi5xMVwiKS52YWx1ZTtcbiAgICBsZXQgYW5zMiA9IGRvY3VtZW50LnF1ZXJ5U2VsZWN0b3IoXCIucTJcIikudmFsdWU7XG5cbiAgICBjb25zb2xlLmxvZyhhbnMxKTtcbiAgICBjb25zb2xlLmxvZyhhbnMyKTtcbiAgICBpZiAoYW5zMSA+IDAgJiYgYW5zMSA8IDE1ICYmIGFuczIgPT09IFwiTmljZSBhbmQgcGxheWZ1bFwiKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIiB5b3UgcGlja2VkIFwiICsgYW5zMSArIFwiIGFuZCBcIiArIGFuczIgKyBcIiB5b3UgYXJlIEx1aXMgQW5nZWwgTWFsYWdvblwiO1xuICAgICAgICBtYWxhLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgfVxuXG4gICAgZWxzZSBpZiAoYW5zMSA+IDE1ICYmIGFuczEgPCAzNCAmJiBhbnMyID09PSBcIk5pY2UgYW5kIHBsYXlmdWxcIikge1xuICAgICAgICByZXN1bHQuaW5uZXJIVE1MID0gXCIgeW91IHBpY2tlZCBcIiArIGFuczEgKyBcIiBhbmQgXCIgKyBhbnMyICsgXCIgeW91IGFyZSBIZW5yeSBNYXJ0aW5cIjtcbiAgICAgICAgYm9tYmEuc3R5bGUuZGlzcGxheSA9IFwiYmxvY2tcIjtcbiAgICB9XG5cbiAgICBlbHNlIGlmIChhbnMxID4gMCAmJiBhbnMxIDwgMTUgJiYgYW5zMiA9PT0gXCJSdWRlIGFuZCBzYXJjYXN0aWNcIikge1xuICAgICAgICByZXN1bHQuaW5uZXJIVE1MID0gXCIgeW91IHBpY2tlZCBcIiArIGFuczEgKyBcIiBhbmQgXCIgKyBhbnMyICsgXCIgeW91IGFyZSBLZXZpbiBBbHZhcmV6XCI7XG4gICAgICAgIG5haGluLnN0eWxlLmRpc3BsYXkgPSBcImJsb2NrXCI7XG4gICAgfVxuXG4gICAgZWxzZSBpZiAoYW5zMSA+IDE1ICYmIGFuczEgPCAzNCAmJiBhbnMyID09PSBcIlJ1ZGUgYW5kIHNhcmNhc3RpY1wiKSB7XG4gICAgICAgIHJlc3VsdC5pbm5lckhUTUwgPSBcIiB5b3UgcGlja2VkIFwiICsgYW5zMSArIFwiIGFuZCBcIiArIGFuczIgKyBcIiB5b3UgYXJlIElnb3JcIjtcbiAgICAgICAgaWdvci5zdHlsZS5kaXNwbGF5ID0gXCJibG9ja1wiO1xuICAgIH1cbiAgICBlbHNlIHtcbiByZXN1bHQuaW5uZXJIVE1MID0gXCJJbmNvcnJlY3QgaW5wdXRzLCB0cnkgYWdhaW5cIjtcbiAgICB9XG4gICAgICAgIFxuICAgIGNvdW50bXNnLmlubmVySFRNTCA9IFwieW91IHRvb2sgdGhpcyBxdWl6XCIgKyBjb3VudGVyICsgXCJ0aW1lL3NcIjtcblx0XG5cblxufTsiXX0=</script></body></html>
