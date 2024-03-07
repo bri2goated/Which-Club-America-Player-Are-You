@@ -1,0 +1,29 @@
+body {
+
+    font-family: 'serif', Georgia;
+    background-color: #FFEE99;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.Mala {
+    display: none;
+}
+
+.Bomba {
+    display: none;
+}
+
+.Nahin {
+    display: none;
+}
+
+.Igor {
+    display: none;
+}
